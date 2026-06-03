@@ -5,6 +5,6 @@
 
 
 ## Tareas 
-![Arquitectura de la aplicación](https://github.co## 3. Indicem/AzaelMD115/clouddataprocessing/blob/main/arquitectura%20para%20una%20aplicacion.png?raw=true)
+![Arquitectura de la aplicación](https://github.coem/AzaelMD115/clouddataprocessing/blob/main/arquitectura%20para%20una%20aplicacion.png?raw=true)
 ## Apuntes
 ## Proyectos
