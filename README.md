@@ -8,7 +8,7 @@
 Tarea #N 998 Arquitectura de Aplicación
 ![Arquitectura de la aplicación](https://github.com/AzaelMD115/clouddataprocessing/blob/main/arquitectura%20para%20una%20aplicacion.png?raw=true)
 
-Tarea #N 999
+###Tarea #N 999
 PY3 
 <img width="489" height="211" alt="Image" src="https://github.com/user-attachments/assets/b70fda63-1b7b-49b1-8450-f6f51b16bc8c" />
 
@@ -17,6 +17,13 @@ Parrot
 
 Docker  
 <img width="1918" height="1013" alt="Image" src="https://github.com/user-attachments/assets/b4ed2e82-4d40-482a-9e32-344c573d9955" />
+
+
+### Tarea #997 Investigar sobre Pizza as a service 2.0
+https://azaelmd115.github.io/index.html
+
+### Tarea #996 Investigacion
+https://azaelmd115.github.io/solucion_problemas_tic.html
 
 
 ---
