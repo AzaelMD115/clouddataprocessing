@@ -22,28 +22,97 @@ Docker
 ---
 ## Apuntes
 
-> 10/06/2026
-Los contenedores son efimeros porque cuando terminan de 
-niveles de abstraccion
-Maquina fisica -> Maquina virtual -> Contenedor 
+### 10/06/2026 — Contenedores y virtualización
 
-Crea un entorno para poder ejecutar scripts de manera efectiva sin necesidad de instalar todo el sistema operativo por ejemplo 
+**Niveles de abstracción**
+<img width="1918" height="1013" alt="Image" src="https://github.com/user-attachments/assets/2df9b799-9ce2-4216-8800-57b37135703f" />
 
-Vagrant = sirve para definir las caracterisiticas espeficicas de virtualbox y virtual boxes(plantillas de sistemas operativos 
-Esto sirve para autimatizar la creacion de servidores y ambientes de prueba(no usar en produccion a menos de ser tu el creador del box)
+- Los contenedores son **efímeros**: cuando terminan de ejecutarse, se detienen (se "mueren").
+- Un contenedor crea un entorno para ejecutar scripts de forma efectiva **sin necesidad de instalar todo el sistema operativo**.
 
-Docker hub = Plantillas de contenedores(images)
-Para crear una imagen se necesita un dockerfile y se espedifica a partir de una imagen base 
-  From -nombre de la imagen base- 
-  CMD echo"hola mundo"
-docker buid . -t hola
-docker images  # Muestra tu imagen 
-docker run hola  # crea el contenedor, ejecuta el contenedor y cuando termina de ejecutarse se muere) 
-docker ps -a #nuestra los contenedores 
+**Vagrant**
 
-Para configurar los servicios se utliza el dockercompose
+- Sirve para definir las características específicas de VirtualBox y de los *boxes* (plantillas de sistemas operativos).
+- Automatiza la creación de servidores y ambientes de prueba.
+- No usar en producción (a menos que seas tú el creador del *box*).
 
-docker-compose.
+**Docker**
+
+- **Docker Hub**: repositorio de plantillas de contenedores (*images*).
+- Para crear una imagen se necesita un `Dockerfile`, que se especifica a partir de una imagen base:
+
+```dockerfile
+FROM <nombre_de_la_imagen_base>
+CMD echo "hola mundo"
+```
+
+Comandos básicos:
+
+```bash
+docker build . -t hola   # Construye la imagen y la etiqueta (-t) como "hola"
+docker images            # Muestra tus imágenes
+docker run hola          # Crea y ejecuta el contenedor; al terminar, se detiene
+docker ps -a             # Muestra todos los contenedores
+```
+
+- Para configurar varios servicios se utiliza `docker-compose`.
 
 ---
+
+### Seguridad en la nube de AWS
+
+> AWS Academy Cloud Foundations
+
+**Modelo de responsabilidad compartida**
+
+*Responsabilidad del **cliente** (seguridad EN la nube):*
+
+- Cifrado de datos, protección de datos y protección del tráfico
+- Listas de control de acceso (ACL) y grupos de seguridad
+- Configuración de red
+- Implementación de autenticación multifactor (MFA)
+- Aplicación correcta de contraseñas y acceso basado en roles
+- Sistema operativo de la instancia de Amazon EC2
+
+*Responsabilidad de **AWS** (seguridad DE la nube):*
+
+- Cómputo, almacenamiento, bases de datos y redes
+- Regiones, zonas de disponibilidad y centros de datos
+- Infraestructura de hardware y software
+- Infraestructura de red
+- Infraestructura de virtualización
+
+**Modelos de servicio**
+
+`IaaS` — Infraestructura como servicio (servicios administrados por el cliente):
+
+- Amazon EC2
+- Elastic Block Store (EBS)
+- Virtual Private Cloud (VPC)
+
+`PaaS` — Plataforma como servicio (servicios administrados por AWS):
+
+- AWS Lambda
+- Amazon Relational Database Service (Amazon RDS)
+- AWS Elastic Beanstalk
+
+---
+
+### Redes — Direccionamiento IP
+
+- **DNS**
+- Ejemplo: `192.0.2.0`
+
+| Versión | Tamaño  | Estructura                                            |
+| ------- | ------- | ----------------------------------------------------- |
+| IPv4    | 32 bits | Identificador de red (`192.0.2`) + Host (flexible)    |
+| IPv6    | 128 bits | —                                                    |
+---
 ## Proyectos
+
+### Calculadora Inteligente de Adoquines
+https://proyecto-adoquines.vercel.app/
+
+### Exposición apache-hive
+https://tuxtter.github.io/diapositivas/apache-hive/#/
+
